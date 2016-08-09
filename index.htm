@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Learn</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://code.jquery.com/jquery-1.6.2.min.js" integrity="sha256-0W0HoDU0BfzslffvxQomIbx0Jfml6IlQeDlvsNxGDE8=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Sale</h2>
+
+    <div class="imgs"><img src="img/img_1.jpg" alt=""></div>
+    <div class="imgs"><img src="img/img_1.jpg" alt=""></div>
+    <div class="imgs"><img src="img/img_1.jpg" alt=""></div>
+    <div class="imgs"><img src="img/img_1.jpg" alt=""></div>
+  </div>
+
+
+  <script>
+  $(document).ready(function(){
+    $('.imgs').click(function(){
+      $('.imgs p').remove();
+      var discount = Math.floor( (Math.random()*5) + 5 ),
+          msg = '<p>Your discount ' + discount + '%</p>';
+        // alert(discount);
+        $(this).append(msg);
+    });
+  });
+  </script>
+</body>
+</html>

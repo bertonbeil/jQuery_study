@@ -11,5 +11,10 @@ $(document).ready(function() {
             $(this).off('click');
         });
     }
-    
+
+    function getRandome (num) {
+      var number = Math.floor(Math.random()* num);
+      return number;
+    }
+
 });
